@@ -1,0 +1,15 @@
+setInterval(함수명,주기(밀리세컨드))
+으로 시간 단위로 호출 할 수있음.
+
+date()로 현재 시각을 호출 할 수있음.
+
+위의 두가지를 이용해 현재 시각date()를 부르는 함수를 만들고
+이를 setInterval을 통해서 주기적으로 호출하여 시간을 업데이트함.
+
+date().get~~로 초 분 시 일 월 요일 등을 얻어 올 수있다.
+  month = nowTime.getMonth()+1;
+  day = nowTime.getDate();
+  minutes = nowTime.getMinutes();
+  hours = nowTime.getHours();
+  seconds = nowTime.getSeconds();
+  dayOfWeek = nowTime.getDay();
