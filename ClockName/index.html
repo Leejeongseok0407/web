@@ -3,18 +3,27 @@
   <head>
     <title>What Time is it now</title>
     <meta charset="UTF-8" />
+    <link rel = "stylesheet" href="src/styles.css">
   </head>
 
   <body>
-    <div class = "js-clock">
+    <div class="js-clock">
       <h1>00:00</h1>
   </div>
   <form class="js-form form">
     <input type = "text" placeholder = "what is your name"/>
-    
   </form>
-  <h4 class = "js-greetings greetings"></h4>
+  <h4 class="js-greetings greetings"></h4>
+
+  <form class="js-toDoForm">
+    <input type="text" placeholder= "write a to do"/>
+  </form>
+  <ul class="js-toDoList">
+      <li id="1"></li>
+  </ul>
   <script src="src/index.js"></script>
   <script src="src/gretting.js"></script>
+  <script src="src/todo.js"></script>
   </body>
+
 </html>

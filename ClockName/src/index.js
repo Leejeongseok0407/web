@@ -1,7 +1,6 @@
 
 const clockContainer = document.querySelector(".js-clock");
 const clockTitle = clockContainer.querySelector("h1");
-const Week = new Array("일", "월","화","수","목","금","토");
 
 function getTime() {
   const nowTime = new Date();
