@@ -6,7 +6,8 @@ body {
 }
 
 body {
-  color: #34495e;
+  color: #ffffff;
+  font-weight: 800;
 }
 .clicked {
   color: #7f8c8d;
