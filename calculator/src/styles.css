@@ -1,0 +1,81 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+
+line {
+  display: block;
+  margin: 5px;
+}
+
+button {
+  padding: 20px 20px;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.expression {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.37);
+}
+
+.reault {
+  padding-right: 20px;
+  padding-top: 10px;
+  font-size: 30px;
+  text-align: right;
+}
+
+.resetButton {
+  background-color: rgba(221, 221, 221, 0.774);
+}
+
+.numButton {
+  background-color: gray;
+}
+
+.calculateButton {
+  background-color: orange;
+}
+
+.item {
+  /*
+  grid-column: 1/4;
+  grid-row: 1/4;
+  
+  */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1f 1f 1f;
+  gap: 10px;
+
+  grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+  grid-template-rows: repeat(5, minmax(50px, auto));
+  grid-auto-flow: dense;
+}
+
+.item:nth-child(1) {
+  text-align: center;
+  grid-column: auto / span 4;
+}
+
+.item:nth-child(2) {
+  grid-column: auto / span 3;
+}
+
+.item:nth-child(16) {
+  grid-column: auto / span 2;
+}
+
+#equlButton {
+  background-color: gray;
+}
+
+#zeroButton {
+  padding: 20px 48px;
+}
