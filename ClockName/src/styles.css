@@ -1,14 +1,19 @@
 body {
-  background-color: #ecf0f1;
+  
+  text-align: center;
+  color: #ffffff;
+  font-weight: 900;
+  border: 5px solid darkblue;
 }
+
+.js-toDoList{
+  text-align: left;
+}
+
 .btn {
   cursor: pointer;
 }
 
-body {
-  color: #ffffff;
-  font-weight: 800;
-}
 .clicked {
   color: #7f8c8d;
 }
@@ -21,6 +26,8 @@ body {
 .showing {
   display: block;
 }
+
+
 
 @keyframes fadeIn {
   from {
