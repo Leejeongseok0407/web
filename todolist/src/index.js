@@ -34,7 +34,6 @@ function deleteItem(event) {
     finisheds = cleanFinished;
   }
   saveToDos();
-  listPrint();
 }
 
 function moveToOther(event) {
@@ -61,9 +60,6 @@ function moveToOther(event) {
     finisheds.push(finishObj);
   }
   saveToDos();
-
-
-  listPrint();
 }
 
 function filterToDo(li, isunChecked) {
@@ -156,9 +152,5 @@ function init() {
   toDoForm.addEventListener("submit", handleSubmit);
 }
 
-function listPrint(){
-  console.log(toDos);
-  console.log(finisheds);
-}
 
 init();
