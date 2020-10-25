@@ -1,13 +1,15 @@
 body {
-  
   text-align: center;
   color: #ffffff;
   font-weight: 900;
-  border: 5px solid darkblue;
 }
 
-.js-toDoList{
+.js-toDoList {
+  display: grid;
   text-align: left;
+  grid-auto-flow: dense;
+  grid-template-rows: repeat(10, minmax(30px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(25%, auto));
 }
 
 .btn {
@@ -26,8 +28,6 @@ body {
 .showing {
   display: block;
 }
-
-
 
 @keyframes fadeIn {
   from {
