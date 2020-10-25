@@ -35,7 +35,6 @@ function reset(event) {
 function calculate() {
   let expressionString = String(` ${num} ${savedOP} ${num2} = ${result}`),
     expressiong;
-  console.log(expressionString);
   result += 0;
   if (isreset !== true) {
     expressiong = String(` ${result} ${savedOP} ${num}`);
@@ -46,7 +45,6 @@ function calculate() {
     expressiong = String(` ${num2} ${savedOP} ${num}`);
     expressionString = String(` ${num2} ${savedOP} ${num} = `);
   }
-  console.log(expressionString);
   result = eval(expressiong);
   expressionString += result;
   expression.innerText = expressionString;
@@ -65,7 +63,6 @@ function setOpertor(op) {
   savedOP = op;
   if (isreset === true) {
     num2 = num;
-    console.log("gg");
   }
 }
 
