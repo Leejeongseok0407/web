@@ -60,12 +60,12 @@ function setOpertor(event) {
   op = event.target.innerHTML;
   lastPutNum = false;
   if (savedOP !== null || op === "=") {
+    calculate();
+    
     if(op === "="){
-      calculate();
       savedOP = null;
     }
     else{
-      calculate();
       savedOP = op;
     }
     return;

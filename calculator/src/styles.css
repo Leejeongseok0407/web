@@ -41,22 +41,14 @@ button {
   background-color: orange;
 }
 
-.item {
-  /*
-  grid-column: 1/4;
-  grid-row: 1/4;
-  
-  */
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1f 1f 1f;
   gap: 10px;
 
-  grid-template-columns: repeat(auto-fill, minmax(20%, auto));
-  grid-template-rows: repeat(5, minmax(50px, auto));
   grid-auto-flow: dense;
+  grid-template-rows: repeat(5, minmax(50px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(20%, auto));
 }
 
 .item:nth-child(1) {
