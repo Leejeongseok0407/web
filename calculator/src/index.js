@@ -50,25 +50,37 @@ function calculate() {
   expression.innerText = expressionString;
   resultText.innerText = result;
   num2 = num;
+
+  
 }
 
-//계산자 할당
-function setOpertor(op) {
-  if (savedOP !== null) {
-    calculate();
-  }
-  if (op === "=") {
+
+//연산자 할당
+function setOpertor(event) {
+  op = event.target.innerHTML;
+  lastPutNum = false;
+  if (savedOP !== null || op === "=") {
+    if(op === "="){
+      calculate();
+      savedOP = null;
+    }
+    else{
+      calculate();
+      savedOP = op;
+    }
     return;
   }
   savedOP = op;
   if (isreset === true) {
     num2 = num;
   }
+  console.log(`num ${num} num2 ${num2} result${result} savedOP ${savedOP}`);
 }
 
-//넘버 할당
-function allocatenum(inputnum) {
-  inputnum = Number(inputnum);
+//구분하는 함수
+//버튼이 숫자 버튼인지 함수 버튼인지 구분
+function setinputButton(event) {
+  inputnum = Number(event.target.innerHTML);
   if (lastPutNum === false) {
     num = inputnum;
     lastPutNum = true;
@@ -79,25 +91,12 @@ function allocatenum(inputnum) {
   console.log(`num ${num} num2 ${num2} result${result} savedOP ${savedOP}`);
 }
 
-//연산자 할당
-function setcalculate(event) {
-  lastPutNum = false;
-  const sing = event.target.innerHTML;
-  setOpertor(sing);
-}
-
-//구분하는 함수
-//버튼이 숫자 버튼인지 함수 버튼인지 구분
-function setinputButton(event) {
-  allocatenum(event.target.innerHTML);
-}
-
 function init() {
   numButton.forEach(function (value) {
     value.addEventListener("click", setinputButton);
   });
   calButton.forEach(function (value) {
-    value.addEventListener("click", setcalculate);
+    value.addEventListener("click", setOpertor);
   });
   resetButton.addEventListener("click", reset);
 }
