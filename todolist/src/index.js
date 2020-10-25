@@ -128,7 +128,7 @@ function handleSubmit(event) {
   toDoInput.value = "";
 }
 
-function loadToDOs() {
+function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
   const loadedFinsish = localStorage.getItem(FINISH_LS);
 
@@ -148,9 +148,8 @@ function loadToDOs() {
 }
 
 function init() {
-  loadToDOs();
+  loadToDos();
   toDoForm.addEventListener("submit", handleSubmit);
 }
-
 
 init();
