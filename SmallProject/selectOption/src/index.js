@@ -1,7 +1,7 @@
 
 const selectElement = document.querySelector(".CountryName");
 const SavedCountryName = document.querySelectorAll("option");
-const MY_COUNTRY = "currentCountry";
+const MY_COUNTRY = "current1Country";
 
 function EventHandler(event) {
   saveCountry(event.target.value);
